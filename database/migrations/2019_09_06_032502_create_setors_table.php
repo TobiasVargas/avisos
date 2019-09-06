@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Usuarios extends Migration
+class CreateSetorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class Usuarios extends Migration
      */
     public function up()
     {
-        Schema::create('usuarios', function (Blueprint $table) {
-            $table->bigIncrements('id_usuario');
-            $table->char('nome', 100);
-            $table->unsignedBigInteger('id_setor');
-            $table->foreing('id_setor')->references('id_setor')->on('setores');
+        Schema::create('setors', function (Blueprint $table) {
+            $table->increments('id');
+
+            $table->string('nomeSetor');
+
+            $table->timestamps();
         });
     }
 
@@ -28,6 +29,6 @@ class Usuarios extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('setors');
     }
 }
