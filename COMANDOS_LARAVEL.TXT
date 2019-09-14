@@ -1,0 +1,23 @@
+--- Instalar o Composer
+
+	sudo apt install composer
+
+--- Instalar dependências
+
+	composer install
+
+--- Criar projeto/Instalar dependências
+
+	composer create-project --prefer-dist laravel/laravel nome_do_projeto
+
+--- Criar Model
+
+	php artisan make:model Nome_do_model
+
+--- Criar Model + migration
+
+	php artisan make:model Nome_do_model -m 
+
+--- Executar as migration
+	
+	php artisan migrate

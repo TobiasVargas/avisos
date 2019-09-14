@@ -1,0 +1,10 @@
+entra na pasta htdocs
+
+git clone (url do github)
+digita a senha e o usuario
+
+entra na pasta ppi
+
+git add --all
+git commit - m "comentario"
+git push
